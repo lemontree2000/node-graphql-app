@@ -1,8 +1,4 @@
-import mongoose from 'mongoose';
-
-const Schema = mongoose.Schema;
-
-const useSchema = new Schema({
+export const useSchema = [{
     email: {
         type: String,
         required: true,
@@ -12,6 +8,6 @@ const useSchema = new Schema({
         type: String,
         required: true
     }
-}, { collation: 'user', timestamps: true });
+}, { collation: 'user', timestamps: true }];
 
-export default mongoose.model('user', useSchema);
+export default useSchema;

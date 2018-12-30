@@ -1,7 +1,5 @@
-import mongoose from 'mongoose';
-const Schema = mongoose.Schema;
 
-const postSchema = new Schema({
+const postSchema = [{
     uid: {
         type: String,
         required: true
@@ -12,6 +10,6 @@ const postSchema = new Schema({
     body: {
         type: String
     }
-});
+}];
 
-export default mongoose.model('post', postSchema);
+export default postSchema;

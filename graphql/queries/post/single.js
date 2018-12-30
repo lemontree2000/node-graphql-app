@@ -4,8 +4,8 @@ import {
 } from 'graphql';
 
 import { postType } from '../../types/post';
-import PostModle from '../../../models/post';
-
+import { getModel } from '../../../models/index';
+const PostModel = getModel('posts');
 
 export default {
     type: postType,
@@ -16,6 +16,6 @@ export default {
         }
     },
     resolve(root, params) {
-        return PostModle.findById(params.id).exec();
+        return PostModel.findById(params.id).exec();
     }
 }

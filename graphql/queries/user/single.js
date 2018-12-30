@@ -4,7 +4,8 @@ import {
 } from 'graphql';
 
 import { userType } from '../../types/user';
-import UserModle from '../../../models/user';
+import { getModel } from '../../../models/index';
+const UserModel = getModel('users');
 
 export default {
     type: userType,
@@ -15,6 +16,6 @@ export default {
         }
     },
     resolve(root, params) {
-        return UserModle.findById(params.id).exec();
+        return UserModel.findById(params.id).exec();
     }
 }
