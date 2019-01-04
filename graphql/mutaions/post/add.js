@@ -3,7 +3,9 @@ import {
 } from 'graphql';
 
 import { postType, postInputType } from '../../types/post';
-import PostModel from '../../../models/post';
+import { getModel } from '../../../models/index';
+
+const PostModel = getModel('posts');
 
 export default {
     type: postType,

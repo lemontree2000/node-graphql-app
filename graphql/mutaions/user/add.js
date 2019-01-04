@@ -3,8 +3,9 @@ import {
 } from 'graphql';
 
 import { userType, userInputType } from '../../types/user';
+import { getModel } from '../../../models';
 
-import UserModel from '../../../models/user';
+const UserModel = getModel('users')
 
 export default {
     type: userType,
