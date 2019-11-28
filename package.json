@@ -22,15 +22,19 @@
     "@nestjs/common": "6.10.2",
     "@nestjs/core": "6.10.2",
     "@nestjs/graphql": "6.5.3",
+    "@nestjs/mongoose": "^6.1.2",
     "@nestjs/platform-express": "6.10.2",
+    "@types/mongoose": "^5.5.32",
     "apollo-server-express": "2.9.12",
     "class-transformer": "0.2.3",
     "class-validator": "0.11.0",
     "graphql": "14.5.8",
     "graphql-subscriptions": "1.1.0",
+    "mongoose": "^5.7.12",
     "reflect-metadata": "0.1.13",
     "rimraf": "2.7.1",
-    "rxjs": "6.5.3"
+    "rxjs": "6.5.3",
+    "type-graphql": "^0.17.5"
   },
   "devDependencies": {
     "@nestjs/cli": "6.12.2",
