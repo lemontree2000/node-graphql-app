@@ -8,6 +8,10 @@ export class PostType {
     readonly uid: string
     @Field()
     readonly title: string
+    @Field()
+    readonly createdAt: string
+    @Field()
+    readonly updatedAt: string
     @Field({ nullable: true })
     readonly body?: string
 }

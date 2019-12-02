@@ -2,7 +2,6 @@ import { Model } from 'mongoose';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PostInput } from './input/post.input';
-import { PostType } from './dto/posts.dto';
 import { Post } from './posts.interface';
 
 

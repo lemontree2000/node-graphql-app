@@ -7,6 +7,9 @@ type Mutation {
   createPost(input: PostInput!): PostType!
   deletePost(input: String!): PostType!
   updatePost(input: PostInput!, id: String!): PostType!
+  createUser(input: UserInput!): UserType!
+  deleteUser(input: String!): UserType!
+  updateUser(input: UserInput!, id: String!): UserType!
 }
 
 input PostInput {
@@ -19,10 +22,33 @@ type PostType {
   id: ID!
   uid: String!
   title: String!
+  createdAt: String!
+  updatedAt: String!
   body: String
 }
 
 type Query {
   posts: [PostType!]!
   post(input: String!): PostType!
+  users: [UserType!]!
+  user(input: String!): UserType!
+}
+
+input UserInput {
+  email: String!
+  name: String!
+  avatar: String!
+  age: Int!
+  phone: Int!
+}
+
+type UserType {
+  id: ID!
+  email: String!
+  name: String!
+  avatar: String!
+  age: Int
+  phone: Int
+  createdAt: String!
+  updatedAt: String!
 }
