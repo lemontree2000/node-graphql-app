@@ -3,7 +3,7 @@ import { Post } from './posts.interface';
 
 export const PostSchema = new mongoose.Schema({
     uid: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: 'ref',
         required: true
     },
